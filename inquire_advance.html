@@ -1,226 +1,222 @@
-  <!-- import google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400..600&display=swap" rel="stylesheet">
+<!-- import google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400..600&display=swap" rel="stylesheet">
 
-  <!-- inport css file -->
-    <link rel="stylesheet" href="SDWeb.css">
-    <link rel="stylesheet" href="SDWeb_extend.css">
+<!-- inport css file -->
+<link rel="stylesheet" href="SDWeb.css">
+<link rel="stylesheet" href="SDWeb_extend.css">
+
 <body>
-<div style="background-image: url(https://agrstat.moa.gov.tw/sdweb/images/banner_bg.gif);">
-  <img src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731" alt="農業統計資料查詢">
-</div>
+  <div style="background-image: url(https://agrstat.moa.gov.tw/sdweb/images/banner_bg.gif);">
+    <img src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731" alt="農業統計資料查詢">
+  </div>
 
-<div style="background-image: url(https://agrstat.moa.gov.tw/sdweb/images/menu_bg.gif); white-space: nowrap;">
-        <span id="ctl00_dtlMenu"><span>
+  <div style="background-image: url(https://agrstat.moa.gov.tw/sdweb/images/menu_bg.gif); white-space: nowrap;">
+    <span id="ctl00_dtlMenu"><span>
         <a id="ctl00_dtlMenu_ctl00_lnkMenu" href="../maintenance/Announce.aspx"><img id="ctl00_dtlMenu_ctl00_imgMenu"
-                                                                                     src="https://agrstat.moa.gov.tw/sdweb/images/menu_announce.gif"
-                                                                                     alt="系統公告"
-                                                                                     style="border-width:0px;"></a></span><span>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_announce.gif" alt="系統公告"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl01_lnkMenu" href="../indicator/Indicator.aspx"><img id="ctl00_dtlMenu_ctl01_imgMenu"
-                                                                                    src="https://agrstat.moa.gov.tw/sdweb/images/menu_indicator.gif"
-                                                                                    alt="農業指標"
-                                                                                    style="border-width:0px;"></a></span><span>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_indicator.gif" alt="農業指標"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl02_lnkMenu" href="InquireAdvance.aspx"><img id="ctl00_dtlMenu_ctl02_imgMenu"
-                                                                            src="https://agrstat.moa.gov.tw/sdweb/images/menu_advance_s.gif"
-                                                                            alt="動態查詢"
-                                                                            style="border-width:0px;"></a></span><span>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_advance_s.gif" alt="動態查詢"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl03_lnkMenu" href="../trade/tradereport.aspx"><img id="ctl00_dtlMenu_ctl03_imgMenu"
-                                                                                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_trade.gif"
-                                                                                  alt="農業貿易"
-                                                                                  style="border-width:0px;"></a></span><span>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_trade.gif" alt="農業貿易"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl04_lnkMenu" href="../book/Book.aspx"><img id="ctl00_dtlMenu_ctl04_imgMenu"
-                                                                          src="https://agrstat.moa.gov.tw/sdweb/images/menu_book.gif"
-                                                                          alt="統計書刊" style="border-width:0px;"></a></span><span>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_book.gif" alt="統計書刊"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl05_lnkMenu" href="../common/Download.aspx"><img id="ctl00_dtlMenu_ctl05_imgMenu"
-                                                                                src="https://agrstat.moa.gov.tw/sdweb/images/menu_download.gif"
-                                                                                alt="下載區" style="border-width:0px;"></a></span><span>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_download.gif" alt="下載區"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl06_lnkMenu" href="../official/OfficialInformation.aspx"><img
-                id="ctl00_dtlMenu_ctl06_imgMenu" src="https://agrstat.moa.gov.tw/sdweb/images/menu_Official.gif"
-                alt="公務統計"
-                style="border-width:0px;"></a></span><span>
+            id="ctl00_dtlMenu_ctl06_imgMenu" src="https://agrstat.moa.gov.tw/sdweb/images/menu_Official.gif" alt="公務統計"
+            style="border-width:0px;"></a></span><span>
         <a id="ctl00_dtlMenu_ctl07_lnkMenu" href="../maintenance/Question.aspx"><img id="ctl00_dtlMenu_ctl07_imgMenu"
-                                                                                     src="https://agrstat.moa.gov.tw/sdweb/images/menu_question.gif"
-                                                                                     alt="常見問題"
-                                                                                     style="border-width:0px;"></a></span></span>
-</div>
+            src="https://agrstat.moa.gov.tw/sdweb/images/menu_question.gif" alt="常見問題"
+            style="border-width:0px;"></a></span></span>
+  </div>
 
 
-<div class="wrapper">
-  <div style="height: 30px; margin: 0 0 15px 15px; background-image: url(https://agrstat.moa.gov.tw/sdweb/images/title_line.gif);
+  <div class="wrapper">
+    <div style="height: 30px; margin: 0 0 15px 15px; background-image: url(https://agrstat.moa.gov.tw/sdweb/images/title_line.gif);
 background-position-y: bottom; background-repeat: no-repeat;" class="dynamicSearchTitle">
-    <img src="https://agrstat.moa.gov.tw/sdweb/images/title_icon.gif" alt="">
-    <span id="ctl00_dtlMenuPath" class="MenuPath" style="position: relative; top: -6px">
-    <span>動態查詢</span>
-  </span>
-  </div>
-
-  <div class="table-container">
-    <fieldset class="FieldSet">
-      <b>分類名稱：</b><input name="ctl00$cphMain$uctlInquireAdvance$txtQGrouptName" type="text" size="40"
-                             id="ctl00_cphMain_uctlInquireAdvance_txtQGrouptName">
-      <span class="ThreeDButton ThreeDButtonBackground"
-            onmouseover="this.className='ThreeDButton ThreeDButtonMouseOver';"
-            onmouseout="this.className='ThreeDButton ThreeDButtonBackground';"><span><input type="submit"
-                                                                                            name="ctl00$cphMain$uctlInquireAdvance$btnSearch"
-                                                                                            value="查　詢"
-                                                                                            id="ctl00_cphMain_uctlInquireAdvance_btnSearch"></span></span>
-    </fieldset>
-    <div class="typeSearch">
-      <img src="https://agrstat.moa.gov.tw/sdweb/images/icon_blue.gif"><b>業務分類查詢：</b>
+      <img src="https://agrstat.moa.gov.tw/sdweb/images/title_icon.gif" alt="">
+      <span id="ctl00_dtlMenuPath" class="MenuPath" style="position: relative; top: -6px">
+        <span>動態查詢</span>
+      </span>
     </div>
-    <table id="ctl00_cphMain_uctlInquireAdvance_tabCategory" class="List" cellpadding="6" rules="all" border="1">
-      <tbody>
-      <td class="Header2">
-        <a href="#">地理及環境統計</a>
-      </td>
-      <td class="Header3">
-        <a href="#" style="white-space:nowrap;">土地統計</a>、
-        <a href="#" style="white-space:nowrap;">環境保護統計</a>、
-        <a href="#" style="white-space:nowrap;">自然保育統計</a>、
-        <a href="#" style="white-space:nowrap;">水資源維護統計</a>
-      </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">勞工統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">勞動力統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">社會保險及社會指標統計</a>
-        </td>
-        <td class="Header3">
-          <a href="#" style="white-space:nowrap;">社會保險統計</a> 、
-          <a href="#" style="white-space:nowrap;">社會福利統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#" target="_blank">國民經濟統計</a></td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">家庭收支之統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">農業生產統計</a></td>
-        <td class="Header3">
-          <a href="" style="white-space:nowrap;">農業產值結構與指標</a>、
-          <a href="#" style="white-space:nowrap;">農產品生產面積統計</a>、
-          <a href="#" style="white-space:nowrap;">農產品生產量值統計</a>、
-          <a href="#" style="white-space:nowrap;">畜禽產品飼養數量統計</a>、
-          <a href="#" style="white-space:nowrap;">畜禽產品生產量值統計</a>、
-          <a href="#" style="white-space:nowrap;">水產品生產量值統計</a>、
-          <a href="#" style="white-space:nowrap;">林產品生產量值統計</a>、
-          <a href="#" style="white-space:nowrap;">林地與森林蓄積統計</a>、
-          <a href="#" style="white-space:nowrap;">農畜產品生產成本統計</a>、
-          <a href="#" style="white-space:nowrap;">農業及農食鏈統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="">農產品運銷統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="" style="white-space:nowrap;">農產品價格統計</a> 、
-          <a href="" style="white-space:nowrap;">農產品收購統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="">農業生產資材與設備統計</a>
-        </td>
-        <td class="Header3">
-          <a href="" style="white-space:nowrap;">肥料</a>、
-          <a href="" style="white-space:nowrap;">農機</a>、
-          <a href="" style="white-space:nowrap;"> 配合飼料與動物藥品 </a>、
-          <a href="" style="white-space:nowrap;">農藥</a>、
-          <a href="" style="white-space:nowrap;">漁船</a>、
-          <a href="" style="white-space:nowrap;">土地</a>、
-          <a href="" style="white-space:nowrap;">固定資本形成</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">農家統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">農家人口特性統計</a>
-          、
-          <a href="#" style="white-space:nowrap;">農民生產所得所付物價指數</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">糧食供需統計</a>
-        </td>
-        <td class="Header3">
-          <a href="#" style="white-space:nowrap;">糧食平衡表</a> 、
-          <a href="#" style="white-space:nowrap;">糧食供需指標</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">農業災害統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">森林災害統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">其他農業統計</a>
-        </td>
-        <td class="Header3">
-          <a href="#" style="white-space:nowrap;">水土保持統計</a>、
-          <a href="#" style="white-space:nowrap;">動植物防疫檢疫統計</a>、
-          <a href="#" style="white-space:nowrap;"> 農田水利統計</a>、
-          <a href="#" style="white-space:nowrap;">農民團體數</a>、
-          <a href="#" style="white-space:nowrap;">家畜保險統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">工業統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">製造業統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">服務業統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">商業貿易統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">物價統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">消費者物價統計</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="Header2">
-          <a href="#">一般政務統計</a>
-        </td>
-        <td class="Header3-2">
-          <a href="#" style="white-space:nowrap;">銓敘統計</a>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+
+    <div class="table-container">
+      <fieldset class="FieldSet">
+        <b>分類名稱：</b><input name="ctl00$cphMain$uctlInquireAdvance$txtQGrouptName" type="text" size="40"
+          id="ctl00_cphMain_uctlInquireAdvance_txtQGrouptName">
+        <span class="ThreeDButton ThreeDButtonBackground"
+          onmouseover="this.className='ThreeDButton ThreeDButtonMouseOver';"
+          onmouseout="this.className='ThreeDButton ThreeDButtonBackground';"><span><input type="submit"
+              name="ctl00$cphMain$uctlInquireAdvance$btnSearch" value="查　詢"
+              id="ctl00_cphMain_uctlInquireAdvance_btnSearch"></span></span>
+      </fieldset>
+      <div class="typeSearch">
+        <img src="https://agrstat.moa.gov.tw/sdweb/images/icon_blue.gif"><b>業務分類查詢：</b>
+      </div>
+      <table id="ctl00_cphMain_uctlInquireAdvance_tabCategory" class="List" cellpadding="6" rules="all" border="1">
+        <tbody>
+          <td class="Header2">
+            <a href="#">地理及環境統計</a>
+          </td>
+          <td class="Header3">
+            <a href="#" style="white-space:nowrap;">土地統計</a>、
+            <a href="#" style="white-space:nowrap;">環境保護統計</a>、
+            <a href="#" style="white-space:nowrap;">自然保育統計</a>、
+            <a href="#" style="white-space:nowrap;">水資源維護統計</a>
+          </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">勞工統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">勞動力統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">社會保險及社會指標統計</a>
+            </td>
+            <td class="Header3">
+              <a href="#" style="white-space:nowrap;">社會保險統計</a> 、
+              <a href="#" style="white-space:nowrap;">社會福利統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#" target="_blank">國民經濟統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">家庭收支之統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">農業生產統計</a>
+            </td>
+            <td class="Header3">
+              <a href="" style="white-space:nowrap;">農業產值結構與指標</a>、
+              <a href="#" style="white-space:nowrap;">農產品生產面積統計</a>、
+              <a href="#" style="white-space:nowrap;">農產品生產量值統計</a>、
+              <a href="#" style="white-space:nowrap;">畜禽產品飼養數量統計</a>、
+              <a href="#" style="white-space:nowrap;">畜禽產品生產量值統計</a>、
+              <a href="#" style="white-space:nowrap;">水產品生產量值統計</a>、
+              <a href="#" style="white-space:nowrap;">林產品生產量值統計</a>、
+              <a href="#" style="white-space:nowrap;">林地與森林蓄積統計</a>、
+              <a href="#" style="white-space:nowrap;">農畜產品生產成本統計</a>、
+              <a href="#" style="white-space:nowrap;">農業及農食鏈統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="">農產品運銷統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="" style="white-space:nowrap;">農產品價格統計</a> 、
+              <a href="" style="white-space:nowrap;">農產品收購統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="">農業生產資材與設備統計</a>
+            </td>
+            <td class="Header3">
+              <a href="" style="white-space:nowrap;">肥料</a>、
+              <a href="" style="white-space:nowrap;">農機</a>、
+              <a href="" style="white-space:nowrap;"> 配合飼料與動物藥品 </a>、
+              <a href="" style="white-space:nowrap;">農藥</a>、
+              <a href="" style="white-space:nowrap;">漁船</a>、
+              <a href="" style="white-space:nowrap;">土地</a>、
+              <a href="" style="white-space:nowrap;">固定資本形成</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">農家統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">農家人口特性統計</a>
+              、
+              <a href="#" style="white-space:nowrap;">農民生產所得所付物價指數</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">糧食供需統計</a>
+            </td>
+            <td class="Header3">
+              <a href="#" style="white-space:nowrap;">糧食平衡表</a> 、
+              <a href="#" style="white-space:nowrap;">糧食供需指標</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">農業災害統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">森林災害統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">其他農業統計</a>
+            </td>
+            <td class="Header3">
+              <a href="#" style="white-space:nowrap;">水土保持統計</a>、
+              <a href="#" style="white-space:nowrap;">動植物防疫檢疫統計</a>、
+              <a href="#" style="white-space:nowrap;"> 農田水利統計</a>、
+              <a href="#" style="white-space:nowrap;">農民團體數</a>、
+              <a href="#" style="white-space:nowrap;">家畜保險統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">工業統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">製造業統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">服務業統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">商業貿易統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">物價統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">消費者物價統計</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="Header2">
+              <a href="#">一般政務統計</a>
+            </td>
+            <td class="Header3-2">
+              <a href="#" style="white-space:nowrap;">銓敘統計</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
-<div style="background-color: #5E7E3D; text-align: center; font-size: 9pt; color: #C5D3BA;
+  <div style="background-color: #5E7E3D; text-align: center; font-size: 9pt; color: #C5D3BA;
             padding: 10px;" id="dvDown">
-  100212 臺北市中正區南海路 37 號 ‧ 電話：+886-2-2381-2991 ‧ 傳真：+886-2-2331-0341 Copyright© 農業部 版權所有
-</div>
+    100212 臺北市中正區南海路 37 號 ‧ 電話：+886-2-2381-2991 ‧ 傳真：+886-2-2331-0341 Copyright© 農業部 版權所有
+  </div>
 </body>

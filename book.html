@@ -1,99 +1,702 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <!-- import tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <!-- header -->
-    <div
-      style="
-        background-image: url(https://agrstat.moa.gov.tw/sdweb/images/banner_bg.gif);
-      "
-    >
-      <img
-        src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731"
-        alt="農業統計資料查詢"
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta data-rh="true" name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1">
+  <title>農業統計資料查詢</title>
+
+  <!-- import google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400..600&display=swap" rel="stylesheet">
+
+  <!-- import original CSS -->
+  <link rel="stylesheet" href="SDWeb.css">
+
+  <!-- import bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-5.3.3.css">
+
+  <!-- import extend CSS -->
+  <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+  <!-- form -->
+  <form id="aspnetForm" name="aspnetForm" action="./Book.aspx" method="post">
+    <!-- container -->
+    <div id="dvTop" class="container">
+      <!-- header -->
+      <div style="background-image: url(https://agrstat.moa.gov.tw/sdweb/images/banner_bg.gif);">
+        <img src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731" alt="農業統計資料查詢" />
+      </div>
+
+      <!-- nav -->
+      <div style="background-image: url(https://agrstat.moa.gov.tw/sdweb/images/menu_bg.gif);white-space: nowrap;">
+        <span id="ctl00_dtlMenu"><span>
+            <a id="ctl00_dtlMenu_ctl00_lnkMenu" href="../maintenance/Announce.aspx"><img
+                id="ctl00_dtlMenu_ctl00_imgMenu" src="https://agrstat.moa.gov.tw/sdweb/images/menu_announce.gif"
+                alt="系統公告" style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl01_lnkMenu" href="../indicator/Indicator.aspx"><img id="ctl00_dtlMenu_ctl01_imgMenu"
+                src="https://agrstat.moa.gov.tw/sdweb/images/menu_indicator.gif" alt="農業指標"
+                style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl02_lnkMenu" href="InquireAdvance.aspx"><img id="ctl00_dtlMenu_ctl02_imgMenu"
+                src="https://agrstat.moa.gov.tw/sdweb/images/menu_advance_s.gif" alt="動態查詢"
+                style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl03_lnkMenu" href="../trade/tradereport.aspx"><img id="ctl00_dtlMenu_ctl03_imgMenu"
+                src="https://agrstat.moa.gov.tw/sdweb/images/menu_trade.gif" alt="農業貿易"
+                style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl04_lnkMenu" href="../book/Book.aspx"><img id="ctl00_dtlMenu_ctl04_imgMenu"
+                src="https://agrstat.moa.gov.tw/sdweb/images/menu_book.gif" alt="統計書刊"
+                style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl05_lnkMenu" href="../common/Download.aspx"><img id="ctl00_dtlMenu_ctl05_imgMenu"
+                src="https://agrstat.moa.gov.tw/sdweb/images/menu_download.gif" alt="下載區"
+                style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl06_lnkMenu" href="../official/OfficialInformation.aspx"><img
+                id="ctl00_dtlMenu_ctl06_imgMenu" src="https://agrstat.moa.gov.tw/sdweb/images/menu_Official.gif"
+                alt="公務統計" style="border-width: 0px" /></a></span><span>
+            <a id="ctl00_dtlMenu_ctl07_lnkMenu" href="../maintenance/Question.aspx"><img
+                id="ctl00_dtlMenu_ctl07_imgMenu" src="https://agrstat.moa.gov.tw/sdweb/images/menu_question.gif"
+                alt="常見問題" style="border-width: 0px" /></a></span></span>
+      </div>
+
+      <!-- main -->
+      <table cellpadding="0" cellspacing="0" style="width: 98%;" class="w-full">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="vertical-align: top; padding-top: 5px;" class="p-0">
+              <!-- title -->
+              <div
+                style="height: 30px; margin: 0 0 15px 15px; background-image: url(../../images/title_line.gif); background-position-y: bottom; background-repeat: no-repeat;">
+                <img src="../../images/title_icon.gif" alt="">
+                <span id="ctl00_dtlMenuPath" class="MenuPath" style="position: relative; top: -6px;"><span>
+                    統計書刊
+                  </span></span>
+              </div>
+
+              <!-- content wrapper -->
+              <div style="margin-left: 15px; margin-right: 10px;" class="m-0">
+
+
+                <style type="text/css">
+                  th {
+                    white-space: nowrap;
+                  }
+
+                  .HelpPanel {
+                    width: 400px;
+                    position: absolute;
+                    border: solid 1px black;
+                    background-color: #FFFFCC;
+                    text-align: left;
+                    padding: 5px;
+                    font-size: 10pt;
+                  }
+
+                  .FileExt image {
+                    vertical-align: middle;
+                  }
+
+                  .Instructions {
+                    font-size: 9pt;
+                    color: Blue;
+                    padding-left: 25px;
+                  }
+                </style>
+
+                <script type="text/javascript">
+                  function CategoryAllClick(chkQCategoryAll) {
+                    var i;
+
+                    for (i = 0; i < m_aryCategory.length; i++)
+                      document.getElementById(m_aryCategory[i]).checked = chkQCategoryAll.checked;
+                  }
+
+                  function CategoryClick() {
+                    var i;
+                    var blnCheckAll = true;
+
+                    for (i = 0; i < m_aryCategory.length; i++)
+                      if (!document.getElementById(m_aryCategory[i]).checked) {
+                        blnCheckAll = false;
+                        break;
+                      }
+
+                    document.getElementById("ctl00_cphMain_uctlBook_chkQCategoryAll").checked = blnCheckAll;
+                  }
+
+                  function ElementClientTop(objCtl) {
+                    var intTop = objCtl.offsetTop
+
+                    while (objCtl = objCtl.offsetParent)
+                      intTop += objCtl.offsetTop;
+                    return intTop;
+                  }
+
+                  function ElementClientLeft(objCtl) {
+                    var intLeft = objCtl.offsetLeft
+
+                    while (objCtl = objCtl.offsetParent)
+                      intLeft += objCtl.offsetLeft;
+                    return intLeft;
+                  }
+
+                  function HelpMouseOver(objButton, strPanelID) {
+                    var objPanel = document.getElementById(strPanelID);
+                    var objDiv = document.getElementsByTagName("div")
+
+                    for (var i = 0; i < objDiv.length; i++) {
+                      if (objDiv[i].attributes["class"] == "HelpPanel")
+                        objDiv[i].style.display = "none";
+                    }
+
+                    objPanel.style.top = (ElementClientTop(objButton) - 5) + "px";
+                    objPanel.style.left = (ElementClientLeft(objButton) - 400 - 15) + "px";
+                    objPanel.style.display = "";
+                  }
+
+                  function HelpMouseOut(strPanelID) {
+                    var objPanel = document.getElementById(strPanelID);
+
+                    objPanel.style.display = "none";
+                  }        
+                </script>
+
+                <table style="width: 90%; margin-left: auto; margin-right: auto;" class="w-100 m-0">
+                  <tbody>
+                    <tr>
+
+                      <!-- content -->
+                      <td>
+                        <fieldset class="FieldSet col-12" style="padding-top: 8px; padding-bottom: 8px;">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th valign="top" align="right" rowspan="2">
+                                  類 別：
+                                </th>
+                                <td>
+                                  <input id="ctl00_cphMain_uctlBook_chkQCategoryAll" type="checkbox"
+                                    name="ctl00$cphMain$uctlBook$chkQCategoryAll" checked="checked"
+                                    onclick="CategoryAllClick(this);"><label
+                                    for="ctl00_cphMain_uctlBook_chkQCategoryAll">全部</label>
+                                </td>
+                                <td colspan="3" style="white-space: nowrap;">
+                                  &nbsp;&nbsp;<input id="ctl00_cphMain_uctlBook_rdoPeriodLastst" type="radio"
+                                    name="ctl00$cphMain$uctlBook$Period" value="rdoPeriodLastst"
+                                    checked="checked"><label
+                                    for="ctl00_cphMain_uctlBook_rdoPeriodLastst">最新一期</label>&nbsp;&nbsp;<input
+                                    id="ctl00_cphMain_uctlBook_rdoPeriodAll" type="radio"
+                                    name="ctl00$cphMain$uctlBook$Period" value="rdoPeriodAll"><label
+                                    for="ctl00_cphMain_uctlBook_rdoPeriodAll">包含歷史書刊</label></td>
+                              </tr>
+                              <tr>
+                                <td colspan="4">
+                                  <div>
+                                    <span id="ctl00_cphMain_uctlBook_dltQCategory"><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl00_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl00$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl00_chkQCategory">農業統計年報</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl01_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl01$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl01_chkQCategory">糧食供需年報</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl02_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl02$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl02_chkQCategory">農業統計要覽</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl03_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl03$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl03_chkQCategory">農業統計月報</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl04_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl04$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl04_chkQCategory">農業及農食鏈統計</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl05_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl05$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl05_chkQCategory">主力農家所得調查結果</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl06_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl06$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl06_chkQCategory">農產貿易統計要覽</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl07_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl07$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl07_chkQCategory">其他農業統計專文</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl08_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl08$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl08_chkQCategory">養豬頭數調查報告</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl09_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl09$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl09_chkQCategory">畜禽產品物價統計月報</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl10_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl10$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl10_chkQCategory">畜禽統計調查結果</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span><span>
+                                        <span style="white-space: nowrap; display: inline-table;">
+                                          <input id="ctl00_cphMain_uctlBook_dltQCategory_ctl11_chkQCategory"
+                                            type="checkbox"
+                                            name="ctl00$cphMain$uctlBook$dltQCategory$ctl11$chkQCategory"
+                                            checked="checked" onclick="CategoryClick();"><label
+                                            for="ctl00_cphMain_uctlBook_dltQCategory_ctl11_chkQCategory">畜禽產品生產成本與收益</label>&nbsp;&nbsp;&nbsp;</span>
+                                      </span></span>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>
+                                  書名關鍵字：
+                                </th>
+                                <td>
+                                  <input name="ctl00$cphMain$uctlBook$txtQName" type="text" size="30"
+                                    id="ctl00_cphMain_uctlBook_txtQName">
+                                </td>
+                                <th>
+                                  &nbsp;&nbsp;出版週期：
+                                </th>
+                                <td>
+                                  <select name="ctl00$cphMain$uctlBook$ddlQPeriod"
+                                    id="ctl00_cphMain_uctlBook_ddlQPeriod">
+                                    <option selected="selected" value=""></option>
+                                    <option value="Y">年報</option>
+                                    <option value="H">半年報</option>
+                                    <option value="Q">季報</option>
+                                    <option value="M">月報</option>
+                                    <option value="I">不定期</option>
+
+                                  </select>
+                                  &nbsp;&nbsp;
+                                </td>
+                                <td>
+                                  <span class="ThreeDButton ThreeDButtonBackground"
+                                    onmouseover="this.className='ThreeDButton ThreeDButtonMouseOver';"
+                                    onmouseout="this.className='ThreeDButton ThreeDButtonBackground';"><span><input
+                                        type="submit" name="ctl00$cphMain$uctlBook$btnQuery" value="查　詢"
+                                        id="ctl00_cphMain_uctlBook_btnQuery"></span></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </fieldset>
+                        <br>
+
+                        <!-- table wrapper -->
+                        <div>
+                          <table class="GridView container" cellspacing="0" cellpadding="6" rules="all"
+                            id="ctl00_cphMain_uctlBook_grdBook"
+                            style="width:100%;border-collapse:collapse;padding-top: 20px;">
+
+                            <!-- items -->
+                            <tbody class="container text-center">
+                              <!-- header -->
+                              <tr class="Header row">
+                                <!-- col category -->
+                                <th scope="col" class="col-2 col-md-3">
+                                  <a
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$category_code')">類別</a>
+                                </th>
+
+                                <!-- col book name -->
+                                <th scope="col" class="col-2 col-md-4">
+                                  <a
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$book_name')">書名</a>
+                                </th>
+
+                                <!-- col release period -->
+                                <th scope="col" class="col-3 col-md-2">
+                                  <a
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$period_serial_no')">出版週期</a>
+                                </th>
+
+                                <!-- col release date -->
+                                <th scope="col" class="col-3 col-md-2">
+                                  <a
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$publish_date')">出版日期</a>
+                                </th>
+
+                                <!-- col desc -->
+                                <th scope="col" class="col-2 col-md-1">說明</th>
+                              </tr>
+
+                              <!-- item 1 -->
+                              <tr class="Row row">
+                                <!-- col category -->
+                                <td class="col-2 col-md-3">畜禽產品物價統計月報</td>
+
+                                <!-- col book name -->
+                                <td class="col-2 col-md-4">
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl02_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl02_lnkBookUrl" title="開啟新視窗"
+                                    href="https://price.naif.org.tw/query/QueryNow.aspx"
+                                    target="_blank">畜禽產品物價統計月報</a><br>
+                                  <span id="ctl00_cphMain_uctlBook_grdBook_ctl02_lblInstructions"
+                                    class="Instructions">｢畜禽產品物價統計月報」自109年1月起停止出刊，原刊布內容已於｢畜產品價格查詢系統」網站，提供彈性查詢，感謝您的配合與支持。</span>
+                                </td>
+
+                                <!-- col release period -->
+                                <td align="center" class="col-3 col-md-2">月報</td>
+
+                                <!-- col release date -->
+                                <td align="center" class="col-3 col-md-2">
+                                </td>
+
+                                <!-- col desc -->
+                                <td align="center" class="col-2 col-md-1">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl02_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl02_divClose" style="text-align: right; width: 100%; color: Black;
+                                          cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+
+
+                              <tr class="AlternatingRow row">
+                                <td>畜禽統計調查結果</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl03_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl03_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl03$btnBookName','')">畜牧類農情統計調查結果(含產值)（112年）</a><br>
+
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  113/03/15</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl03_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl03_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="Row row">
+                                <td>養豬頭數調查報告</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl04_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl04_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl04$btnBookName','')">112年11月底養豬頭數調查報告</a><br>
+
+                                </td>
+                                <td align="center">半年報</td>
+                                <td align="center">
+                                  113/01/15</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl04_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl04_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="AlternatingRow row">
+                                <td>農業及農食鏈統計</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl05_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl05_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl05$btnBookName','')">農業及農食鏈統計（111年）</a><br>
+
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  112/12/29</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl05_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl05_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="Row row">
+                                <td>糧食供需年報</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl06_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl06_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl06$btnBookName','')">糧食供需年報（111年）</a><br>
+                                  <span id="ctl00_cphMain_uctlBook_grdBook_ctl06_lblInstructions"
+                                    class="Instructions">為配合政府e化及響應環保，本刊將自106年起停印紙本，嗣後請逕至本部網站｢統計與出版品」下查詢，感謝您的配合與支持。</span>
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  112/10/02</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl06_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl06_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="AlternatingRow row">
+                                <td>畜禽產品生產成本與收益</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl07_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl07_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl07$btnBookName','')">主要畜禽產品生產成本與收益分析（111年）</a><br>
+
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  112/08/31</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl07_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl07_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="Row row">
+                                <td>主力農家所得調查結果</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl08_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl08_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl08$btnBookName','')">主力農家所得調查結果（111年）</a><br>
+
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  112/08/30</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl08_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl08_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="AlternatingRow row">
+                                <td>農業統計要覽</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl09_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl09_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl09$btnBookName','')">農業統計要覽（111年）</a><br>
+
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  112/08/01</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl09_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl09_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="Row row">
+                                <td>農業統計年報</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl10_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl10_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl10$btnBookName','')">農業統計年報（111年）</a><br>
+
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  112/07/06</td>
+                                <td align="center">
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl10_imgHelp"
+                                    onclick="HelpMouseOver(this,'ctl00_cphMain_uctlBook_grdBook_ctl10_panHelp')"
+                                    src="../../images/button_read.gif" style="border-width:0px;cursor: help">
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl10_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl10_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;"
+                                      onclick="HelpMouseOut('ctl00_cphMain_uctlBook_grdBook_ctl10_panHelp')">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+                                    1.本年報係依統計法及其施行細則相關規定編製，以原臺灣省政府農林廳編印之「臺灣農業年報」為架構與內容，加以擴編而成。旨在以數字報導農、林、漁、牧之生產、價格、成本、農業及農食鏈、農產貿易、糧食供需、農業天然災害與救助等各項最新基本統計，俾便瞭解整體農業概況。<br>2.本年報資料地區範圍除另有註明外，均以臺閩地區為地區範圍。
+                                    <br>3.本年報資料時期屬靜態資料者以111年12月31日為準，屬動態資料者以111年1月至12月資料為準。部分資料因最新調查統計結果尚未產生，故以110年資料刊載。
+                                    <br>4.本年報所載數字如與前期內容不同者，應以本期為準。 <br>5.本年報各項資料來源、說明及附註，分別於各表下方註明。
+                                    <br>6.本年報部分數字，由於尾數四捨五入關係，總數與細數之間，容或未能完全吻合。
+                                    <br>7.本年報所用度量衡單位以公制為準，金額（價值）則以新台幣計算，其有特殊情形者，均分別於各表中註明。 <br>8.本年報所用符號代表意義如下： <br>p
+                                    ：表示初步統計數 <br>f ：表示預測數 <br>r ：表示修正數 <br>e ：表示估計數 <br>－：表示無數值或數值無統計 <br>…：表示數值尚未發布
+                                    <br>0 ：表示數值不及半單位
+                                    <br>＊：表示當年度以前（含當年度）資料地區範圍為臺灣地區<br>資料修正歷程：<br>112.10.5修正111年農業生產結構<br>112.10.5修正111年農產品生產量值<br>112.10.5修正111年漁業生產
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="AlternatingRow">
+                                <td>農產貿易統計要覽</td>
+                                <td>
+                                  <img id="ctl00_cphMain_uctlBook_grdBook_ctl11_imgBook"
+                                    src="../../images/book_close.gif" style="border-width:0px;vertical-align: middle;">
+                                  <a id="ctl00_cphMain_uctlBook_grdBook_ctl11_btnBookName"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook$ctl11$btnBookName','')">農產貿易統計要覽（105年）</a><br>
+                                  <span id="ctl00_cphMain_uctlBook_grdBook_ctl11_lblInstructions"
+                                    class="Instructions">為配合政府e化及響應環保，本刊自106年起停止出刊，刊物內容請逕至本部網站｢農業統計資料查詢」之｢農業貿易&gt;農產品別資料查詢」下彈性查詢，感謝您的配合與支持。</span>
+                                </td>
+                                <td align="center">年報</td>
+                                <td align="center">
+                                  106/04/27</td>
+                                <td align="center">
+
+                                  <div id="ctl00_cphMain_uctlBook_grdBook_ctl11_panHelp" class="HelpPanel"
+                                    style="display: none;">
+
+                                    <div id="ctl00_cphMain_uctlBook_grdBook_ctl11_divClose" style="text-align: right; width: 100%; color: Black;
+                                        cursor: pointer;">
+                                      <img src="../../images/Close.gif" alt="" title="關閉"
+                                        style="vertical-align: middle;">&nbsp;關閉
+                                    </div>
+                                    <hr>
+
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr class="Pager">
+                                <td colspan="5">
+                                  <table border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td><span>1</span></td>
+                                        <td><a
+                                            href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Page$2')">2</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+            </td>
+          </tr>
+          <tr>
+
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+      <!-- footer -->
+      <div style="background-color: #5E7E3D; text-align: center; font-size: 9pt; color: #C5D3BA;
+            padding: 10px;" id="dvDown">
+        100212 臺北市中正區南海路 37 號 ‧ 電話：+886-2-2381-2991 ‧ 傳真：+886-2-2331-0341 Copyright© 農業部 版權所有
+      </div>
     </div>
 
-    <!-- nav -->
-    <div
-      style="
-        background-image: url(https://agrstat.moa.gov.tw/sdweb/images/menu_bg.gif);
-        white-space: nowrap;
-      "
-    >
-      <span id="ctl00_dtlMenu"
-        ><span>
-          <a
-            id="ctl00_dtlMenu_ctl00_lnkMenu"
-            href="../maintenance/Announce.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl00_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_announce.gif"
-              alt="系統公告"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a id="ctl00_dtlMenu_ctl01_lnkMenu" href="../indicator/Indicator.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl01_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_indicator.gif"
-              alt="農業指標"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a id="ctl00_dtlMenu_ctl02_lnkMenu" href="InquireAdvance.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl02_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_advance_s.gif"
-              alt="動態查詢"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a id="ctl00_dtlMenu_ctl03_lnkMenu" href="../trade/tradereport.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl03_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_trade.gif"
-              alt="農業貿易"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a id="ctl00_dtlMenu_ctl04_lnkMenu" href="../book/Book.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl04_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_book.gif"
-              alt="統計書刊"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a id="ctl00_dtlMenu_ctl05_lnkMenu" href="../common/Download.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl05_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_download.gif"
-              alt="下載區"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a
-            id="ctl00_dtlMenu_ctl06_lnkMenu"
-            href="../official/OfficialInformation.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl06_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_Official.gif"
-              alt="公務統計"
-              style="border-width: 0px" /></a></span
-        ><span>
-          <a
-            id="ctl00_dtlMenu_ctl07_lnkMenu"
-            href="../maintenance/Question.aspx"
-            ><img
-              id="ctl00_dtlMenu_ctl07_imgMenu"
-              src="https://agrstat.moa.gov.tw/sdweb/images/menu_question.gif"
-              alt="常見問題"
-              style="border-width: 0px" /></a></span
-      ></span>
-    </div>
+
+  </form>
 
 
-  </body>
+</body>
+
 </html>
