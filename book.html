@@ -294,28 +294,243 @@
                       <tr>
                         <!-- content -->
                         <td>
-                          <fieldset
-                            class="FieldSet col-12"
-                            style="padding-top: 8px; padding-bottom: 8px"
-                          >
+                          <fieldset class="FieldSet p-0 m-0">
                             <table>
-                              <tbody>
-                                <tr>
-                                  <th valign="top" align="right" rowspan="2">
+                              <tbody class="container">
+                                <!-- categories -->
+                                <tr class="row">
+                                  <th
+                                    valign="top"
+                                    align="right"
+                                    rowspan="2"
+                                    class="col-12"
+                                  >
                                     類 別：
                                   </th>
-                                  <td>
+
+                                  <!-- all -->
+                                  <td class="col-12 py-1">
                                     <input
+                                      class="form-check-input"
                                       id="ctl00_cphMain_uctlBook_chkQCategoryAll"
                                       type="checkbox"
                                       name="ctl00$cphMain$uctlBook$chkQCategoryAll"
                                       checked="checked"
                                       onclick="CategoryAllClick(this);"
-                                    /><label
+                                    />
+                                    <label
+                                      class="form-check-label"
                                       for="ctl00_cphMain_uctlBook_chkQCategoryAll"
                                       >全部</label
                                     >
                                   </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl00_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl00$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl00_chkQCategory"
+                                      >農業統計年報</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl01_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl01$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl01_chkQCategory"
+                                      >糧食供需年報</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl02_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl02$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl02_chkQCategory"
+                                      >農業統計要覽</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl03_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl03$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl03_chkQCategory"
+                                      >農業統計月報</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl04_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl04$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl04_chkQCategory"
+                                      >農業及農食鏈統計</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl05_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl05$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl05_chkQCategory"
+                                      >主力農家所得調查結果
+                                    </label>
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl06_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl06$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl06_chkQCategory"
+                                      >農產貿易統計要覽</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl07_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl07$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl07_chkQCategory"
+                                      >其他農業統計專文</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl08_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl08$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl08_chkQCategory"
+                                      >養豬頭數調查報告</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl09_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl09$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl09_chkQCategory"
+                                      >畜禽產品物價統計月報</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl10_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl10$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl10_chkQCategory"
+                                      >畜禽統計調查結果</label
+                                    >
+                                  </td>
+
+                                  <td class="col-12 py-1">
+                                    <input
+                                      class="form-check-input"
+                                      id="ctl00_cphMain_uctlBook_dltQCategory_ctl11_chkQCategory"
+                                      type="checkbox"
+                                      name="ctl00$cphMain$uctlBook$dltQCategory$ctl11$chkQCategory"
+                                      checked="checked"
+                                      onclick="CategoryClick();"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="ctl00_cphMain_uctlBook_dltQCategory_ctl11_chkQCategory"
+                                      >畜禽產品生產成本與收益
+                                    </label>
+                                  </td>
+
+                                  <td class="w-100 py-2"></td>
+                                </tr>
+
+                                <!-- peroid -->
+                                <tr class="row">
+                                  <th
+                                    valign="top"
+                                    align="right"
+                                    rowspan="2"
+                                    class="col-12"
+                                  >
+                                    期 別：
+                                  </th>
+
                                   <td colspan="3" style="white-space: nowrap">
                                     &nbsp;&nbsp;<input
                                       id="ctl00_cphMain_uctlBook_rdoPeriodLastst"
@@ -336,233 +551,10 @@
                                       >包含歷史書刊</label
                                     >
                                   </td>
+
+                                  <td class="w-100 py-2"></td>
                                 </tr>
-                                <tr>
-                                  <td colspan="4">
-                                    <div>
-                                      <span
-                                        id="ctl00_cphMain_uctlBook_dltQCategory"
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl00_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl00$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl00_chkQCategory"
-                                              >農業統計年報</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl01_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl01$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl01_chkQCategory"
-                                              >糧食供需年報</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl02_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl02$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl02_chkQCategory"
-                                              >農業統計要覽</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl03_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl03$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl03_chkQCategory"
-                                              >農業統計月報</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl04_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl04$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl04_chkQCategory"
-                                              >農業及農食鏈統計</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl05_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl05$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl05_chkQCategory"
-                                              >主力農家所得調查結果</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl06_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl06$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl06_chkQCategory"
-                                              >農產貿易統計要覽</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl07_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl07$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl07_chkQCategory"
-                                              >其他農業統計專文</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl08_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl08$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl08_chkQCategory"
-                                              >養豬頭數調查報告</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl09_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl09$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl09_chkQCategory"
-                                              >畜禽產品物價統計月報</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl10_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl10$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl10_chkQCategory"
-                                              >畜禽統計調查結果</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          > </span
-                                        ><span>
-                                          <span
-                                            style="
-                                              white-space: nowrap;
-                                              display: inline-table;
-                                            "
-                                          >
-                                            <input
-                                              id="ctl00_cphMain_uctlBook_dltQCategory_ctl11_chkQCategory"
-                                              type="checkbox"
-                                              name="ctl00$cphMain$uctlBook$dltQCategory$ctl11$chkQCategory"
-                                              checked="checked"
-                                              onclick="CategoryClick();"
-                                            /><label
-                                              for="ctl00_cphMain_uctlBook_dltQCategory_ctl11_chkQCategory"
-                                              >畜禽產品生產成本與收益</label
-                                            >&nbsp;&nbsp;&nbsp;</span
-                                          >
-                                        </span></span
-                                      >
-                                    </div>
-                                  </td>
-                                </tr>
+
                                 <tr>
                                   <th>書名關鍵字：</th>
                                   <td>
@@ -573,6 +565,9 @@
                                       id="ctl00_cphMain_uctlBook_txtQName"
                                     />
                                   </td>
+
+                                  <td class="w-100 py-2"></td>
+
                                   <th>&nbsp;&nbsp;出版週期：</th>
                                   <td>
                                     <select
@@ -631,7 +626,7 @@
                                   <!-- col category -->
                                   <th scope="col" class="col-2 col-md-3">
                                     <a
-                                    class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                      class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
                                       href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$category_code')"
                                       >類別</a
                                     >
@@ -640,7 +635,7 @@
                                   <!-- col book name -->
                                   <th scope="col" class="col-2 col-md-4">
                                     <a
-                                    class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                      class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
                                       href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$book_name')"
                                       >書名</a
                                     >
@@ -649,7 +644,7 @@
                                   <!-- col release period -->
                                   <th scope="col" class="col-3 col-md-2">
                                     <a
-                                    class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                      class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
                                       href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$period_serial_no')"
                                       >出版週期</a
                                     >
@@ -658,7 +653,7 @@
                                   <!-- col release date -->
                                   <th scope="col" class="col-3 col-md-2">
                                     <a
-                                    class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                      class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
                                       href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Sort$publish_date')"
                                       >出版日期</a
                                     >
