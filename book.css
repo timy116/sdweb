@@ -2,9 +2,9 @@
 :host,
 html,
 body {
-  font-family: 'Noto Sans TC', 'Microsoft JhengHei', ui-sans-serif, system-ui,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
+  font-family: "Noto Sans TC", "Microsoft JhengHei", ui-sans-serif, system-ui,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 /* Display */
@@ -31,4 +31,28 @@ body {
 
 .w-0 {
   width: 0 !important;
+}
+
+/* Max-Width */
+.max-w-full {
+  max-width: 100%;
+}
+
+
+/* ------------------------ Book page styling ------------------------ */
+/* GridView part */
+.GridView tr:nth-child(odd) td {
+  background-color: #f2f2f2;
+}
+
+.GridView .Pager tr td {
+  background-color: #8aa96c;
+}
+
+.GridView .link-secondary {
+  color: var(--bs-secondary-text-emphasis) !important;
+}
+
+.GridView .Instructions {
+  color: var(--bs-blue) !important;
 }
