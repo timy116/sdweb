@@ -39,7 +39,28 @@ body {
 }
 
 
+/* ------------------------ Spacing ------------------------ */
+/* Margin */
+.mt-10 {
+  margin-top: 2.5rem !important;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
+
 /* ------------------------ Book page styling ------------------------ */
+/* navbar styling */
+.book-navbar .nav-link {
+  color: var(--bs-white) !important;
+}
+
+.book-navbar .nav-link:hover,
+.book-navbar .nav-link:focus {
+  background-color: #c5ccb2;
+}
+
 /* GridView part */
 .GridView tr:nth-child(odd) td {
   background-color: #f2f2f2;
