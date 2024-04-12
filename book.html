@@ -1530,27 +1530,51 @@
                                     </div>
                                   </td>
                                 </tr>
-
-                                <!-- pager -->
-                                <tr class="Pager row">
-                                  <td colspan="5">
-                                    <table border="0">
-                                      <tbody>
-                                        <tr>
-                                          <td><span>1</span></td>
-                                          <td>
-                                            <a
-                                              href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Page$2')"
-                                              >2</a
-                                            >
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
                               </tbody>
                             </table>
+
+                            <!-- pagination -->
+                            <nav class="Page navigation mt-4">
+                              <ul class="pagination  justify-content-center">
+                                <!-- prev -->
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="#"
+                                    aria-label="Previous"
+                                  >
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+
+                                <!-- pages -->
+                                <li class="page-item active">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Page$1')"
+                                    >1</a
+                                  >
+                                </li>
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="javascript:__doPostBack('ctl00$cphMain$uctlBook$grdBook','Page$2')"
+                                    >2</a
+                                  >
+                                </li>
+
+                                <!-- next -->
+                                <li class="page-item">
+                                  <a
+                                    class="page-link"
+                                    href="#"
+                                    aria-label="Next"
+                                  >
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
                           </div>
                         </td>
                       </tr>
