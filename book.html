@@ -20,6 +20,9 @@
     <!-- import original CSS -->
     <link rel="stylesheet" href="SDWeb.css" />
 
+    <!-- import original CSS -->
+    <link rel="stylesheet" href="SDWeb_extend.css" />
+
     <!-- import bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-5.3.3.css" />
 
@@ -77,7 +80,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link px-md-2 px-lg-3 px-xl-4"
-                    href="../indicator/Indicator.aspx"
+                    href="indicator.html"
                     id="ctl00_dtlMenu_ctl01_lnkMenu"
                     >農業指標</a
                   >
@@ -101,7 +104,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link px-md-2 px-lg-3 px-xl-4"
-                    href="../book/Book.aspx"
+                    href="book.html"
                     id="ctl00_dtlMenu_ctl04_lnkMenu"
                     >統計書刊</a
                   >
@@ -135,120 +138,6 @@
           </div>
         </nav>
 
-        <!-- nav -->
-        <!-- <div
-          style="
-            background-image: url(https://agrstat.moa.gov.tw/sdweb/images/menu_bg.gif);
-            white-space: nowrap;
-          "
-        >
-          <span id="ctl00_dtlMenu">
-            <span>
-              <a
-                id="ctl00_dtlMenu_ctl00_lnkMenu"
-                href="../maintenance/Announce.aspx"
-              >
-                <img
-                  id="ctl00_dtlMenu_ctl00_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_announce.gif"
-                  alt="系統公告"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a
-                id="ctl00_dtlMenu_ctl01_lnkMenu"
-                href="../indicator/Indicator.aspx"
-              >
-                <img
-                  id="ctl00_dtlMenu_ctl01_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_indicator.gif"
-                  alt="農業指標"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a id="ctl00_dtlMenu_ctl02_lnkMenu" href="InquireAdvance.aspx">
-                <img
-                  id="ctl00_dtlMenu_ctl02_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_advance_s.gif"
-                  alt="動態查詢"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a
-                id="ctl00_dtlMenu_ctl03_lnkMenu"
-                href="../trade/tradereport.aspx"
-              >
-                <img
-                  id="ctl00_dtlMenu_ctl03_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_trade.gif"
-                  alt="農業貿易"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a id="ctl00_dtlMenu_ctl04_lnkMenu" href="../book/Book.aspx">
-                <img
-                  id="ctl00_dtlMenu_ctl04_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_book.gif"
-                  alt="統計書刊"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a
-                id="ctl00_dtlMenu_ctl05_lnkMenu"
-                href="../common/Download.aspx"
-              >
-                <img
-                  id="ctl00_dtlMenu_ctl05_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_download.gif"
-                  alt="下載區"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a
-                id="ctl00_dtlMenu_ctl06_lnkMenu"
-                href="../official/OfficialInformation.aspx"
-              >
-                <img
-                  id="ctl00_dtlMenu_ctl06_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_Official.gif"
-                  alt="公務統計"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-
-            <span>
-              <a
-                id="ctl00_dtlMenu_ctl07_lnkMenu"
-                href="../maintenance/Question.aspx"
-              >
-                <img
-                  id="ctl00_dtlMenu_ctl07_imgMenu"
-                  src="https://agrstat.moa.gov.tw/sdweb/images/menu_question.gif"
-                  alt="常見問題"
-                  style="border-width: 0px"
-                />
-              </a>
-            </span>
-          </span>
-        </div> -->
 
         <!-- main -->
         <table
@@ -797,91 +686,18 @@
                                   </th>
                                 </tr>
 
-                                <!-- item 1 -->
-                                <tr class="Row row">
-                                  <!-- col category -->
-                                  <td
-                                    class="col-2 col-md-3 align-content-center"
-                                  >
-                                    畜禽產品物價統計月報
-                                  </td>
-
-                                  <!-- col book name -->
-                                  <td
-                                    class="col-2 col-md-4 align-content-center"
-                                  >
-                                    <a
-                                      class="link-secondary link-underline-opacity-25 link-offset-2 link-offset-2-hover link-underline-opacity-100-hover"
-                                      id="ctl00_cphMain_uctlBook_grdBook_ctl02_lnkBookUrl"
-                                      title="開啟新視窗"
-                                      href="https://price.naif.org.tw/query/QueryNow.aspx"
-                                      target="_blank"
-                                      >畜禽產品物價統計月報</a
-                                    ><br />
-                                    <span
-                                      id="ctl00_cphMain_uctlBook_grdBook_ctl02_lblInstructions"
-                                      class="Instructions p-1"
-                                      >｢畜禽產品物價統計月報」自109年1月起停止出刊，原刊布內容已於｢畜產品價格查詢系統」網站，提供彈性查詢，感謝您的配合與支持。</span
-                                    >
-                                  </td>
-
-                                  <!-- col release period -->
-                                  <td
-                                    align="center"
-                                    class="col-3 col-md-2 align-content-center"
-                                  >
-                                    月報
-                                  </td>
-
-                                  <!-- col release date -->
-                                  <td
-                                    align="center"
-                                    class="col-3 col-md-2 align-content-center"
-                                  ></td>
-
-                                  <!-- col desc -->
-                                  <td
-                                    align="center"
-                                    class="col-2 col-md-1 align-content-center"
-                                  >
-                                    <div
-                                      id="ctl00_cphMain_uctlBook_grdBook_ctl02_panHelp"
-                                      class="HelpPanel"
-                                      style="display: none"
-                                    >
-                                      <div
-                                        id="ctl00_cphMain_uctlBook_grdBook_ctl02_divClose"
-                                        style="
-                                          text-align: right;
-                                          width: 100%;
-                                          color: Black;
-                                          cursor: pointer;
-                                        "
-                                      >
-                                        <img
-                                          src="../../images/Close.gif"
-                                          alt=""
-                                          title="關閉"
-                                          style="vertical-align: middle"
-                                        />&nbsp;關閉
-                                      </div>
-                                      <hr />
-                                    </div>
-                                  </td>
-                                </tr>
-
                                 <!-- item 2 -->
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 text-start align-content-center"
                                   >
                                     畜禽統計調查結果
                                   </td>
 
                                   <!-- col book name -->
                                   <td
-                                    class="col-2 col-md-4 align-content-center"
+                                    class="col-2 col-md-4"
                                   >
                                     <a
                                       class="link-secondary link-underline-opacity-25 link-offset-2 link-offset-2-hover link-underline-opacity-100-hover"
@@ -910,7 +726,7 @@
                                   <!-- col desc -->
                                   <td
                                     align="center"
-                                    class="col-2 col-md-1 align-content-center"
+                                    class="col-2 col-md-1"
                                   >
                                     <div
                                       id="ctl00_cphMain_uctlBook_grdBook_ctl03_panHelp"
@@ -942,14 +758,14 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 text-start align-content-center"
                                   >
                                     養豬頭數調查報告
                                   </td>
 
                                   <!-- col book name -->
                                   <td
-                                    class="col-2 col-md-4 align-content-center"
+                                    class="col-2 col-md-4"
                                   >
                                     <a
                                       class="link-secondary link-underline-opacity-25 link-offset-2 link-offset-2-hover link-underline-opacity-100-hover"
@@ -980,7 +796,7 @@
                                   <!-- col desc -->
                                   <td
                                     align="center"
-                                    class="col-2 col-md-1 align-content-center"
+                                    class="col-2 col-md-1"
                                   >
                                     <div
                                       id="ctl00_cphMain_uctlBook_grdBook_ctl03_panHelp"
@@ -1012,7 +828,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     農業及農食鏈統計
                                   </td>
@@ -1082,7 +898,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     糧食供需年報
                                   </td>
@@ -1156,7 +972,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     畜禽產品生產成本與收益
                                   </td>
@@ -1226,7 +1042,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     主力農家所得調查結果
                                   </td>
@@ -1296,7 +1112,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     農業統計要覽
                                   </td>
@@ -1366,7 +1182,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     農業統計年報
                                   </td>
@@ -1436,7 +1252,7 @@
                                 <tr class="AlternatingRow row">
                                   <!-- col category -->
                                   <td
-                                    class="col-2 col-md-3 align-content-center"
+                                    class="col-2 col-md-3 align-content-center text-start"
                                   >
                                     農產貿易統計要覽
                                   </td>

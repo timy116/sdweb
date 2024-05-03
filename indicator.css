@@ -1,0 +1,93 @@
+/* ------------------------ Global styling ------------------------ */
+thead,
+tbody {
+  display: table-header-group;
+}
+
+/* table {
+  border-collapse: inherit;
+} */
+
+th,
+td {
+  display: table-cell;
+}
+
+tr {
+  display: table-row;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+/* ------------------------ indicator styling ------------------------ */
+/* table part */
+.table-wrapper {
+  position: relative;
+  box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.26);
+}
+
+.table-label {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 8px 20px;
+  background: #1dbc9c;
+}
+
+.table-label:before {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 0;
+  right: -8px;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent #0f7460;
+}
+
+.table-label:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent transparent #0f7460 transparent;
+}
+
+.table-responsive:nth-of-type(3) .table-label {
+  background-color: #96ad55;
+}
+
+.table-responsive:nth-of-type(3) .table-label:before {
+  border-color: transparent transparent transparent #566920 ;
+}
+
+.table-responsive:nth-of-type(3) .table-label:after {
+  border-color: transparent transparent #566920 transparent;
+}
+
+
+
+.table th {
+  background-color: #8aa96c;
+  color: #ffffff;
+  border: solid 1px #acb9a0;
+  white-space: nowrap;
+}
+
+.table tr:nth-child(odd) td {
+  background-color: #e6ebd8;
+}
+
+.table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}

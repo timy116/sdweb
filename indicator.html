@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      data-rh="true"
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"
+    />
+    <title>農業統計資料查詢</title>
+
+    <!-- import google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400..600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import original CSS -->
+    <link rel="stylesheet" href="SDWeb.css" />
+
+    <!-- import extend CSS -->
+    <link rel="stylesheet" href="SDWeb_extend.css" />
+
+    <!-- import bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+    />
+
+    <!-- import indicator CSS -->
+    <link rel="stylesheet" href="indicator.css" />
+  </head>
+
+  <body>
+    <!-- container -->
+    <div id="dvTop" class="container">
+      <!-- header -->
+      <div
+        style="
+          background-image: url(https://agrstat.moa.gov.tw/sdweb/images/banner_bg.gif);
+        "
+      >
+        <img
+          src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731"
+          alt="農業統計資料查詢"
+          class="img-fluid"
+        />
+      </div>
+
+      <!-- navbar -->
+      <nav
+        class="book-navbar navbar navbar-expand-lg py-md-0"
+        style="background-color: #8aa96c"
+      >
+        <div class="container px-md-0">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#bookNavBar"
+            aria-controls="bookNavBar"
+            aria-controls="bookNavBar"
+            aria-expanded="false"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- nav wrapper -->
+          <div id="bookNavBar" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-sm-0 w-full justify-content-lg-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="../maintenance/Announce.aspx"
+                  id="ctl00_dtlMenu_ctl00_lnkMenu"
+                  >系統公告</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="../indicator/Indicator.aspx"
+                  id="ctl00_dtlMenu_ctl01_lnkMenu"
+                  >農業指標</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="InquireAdvance.aspx"
+                  id="ctl00_dtlMenu_ctl02_lnkMenu"
+                  >動態查詢</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="../trade/tradereport.aspx"
+                  id="ctl00_dtlMenu_ctl03_lnkMenu"
+                  >農業貿易</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="book.html"
+                  id="ctl00_dtlMenu_ctl04_lnkMenu"
+                  >統計書刊</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="../common/Download.aspx"
+                  id="ctl00_dtlMenu_ctl05_lnkMenu"
+                  >下載區</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="../official/OfficialInformation.aspx"
+                  id="ctl00_dtlMenu_ctl06_lnkMenu"
+                  >公務統計</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link px-md-2 px-lg-3 px-xl-4"
+                  href="../maintenance/Question.aspx"
+                  id="ctl00_dtlMenu_ctl07_lnkMenu"
+                  >常見問題</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- table 1 -->
+      <div class="table-responsive my-10 table-wrapper pt-5 px-2 pb-2">
+        <!-- label -->
+        <h3 class="table-label fw-bold">經濟指標</h3>
+
+        <!-- content -->
+        <table class="table m-0">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">重要統計指標</th>
+              <th scope="col" class="text-center">統計資料</th>
+              <th scope="col" class="text-center">單位</th>
+              <th scope="col" class="text-center">較上年增減</th>
+              <th scope="col" class="text-center">資料日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>農業生產總值</td>
+              <td>562,555,485</td>
+              <td>千元</td>
+              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-up px-1"></i>
+                <span class="px-1">5.0%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+            <tr>
+              <td>農產產值</td>
+              <td>275,934,115</td>
+              <td>千元</td>
+              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-up px-1"></i>
+                <span class="px-1">1.4%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+            <tr>
+              <td>林產產值</td>
+              <td>242,212</td>
+              <td>千元</td>
+              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-up px-1"></i>
+                <span class="px-1">6.5%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+            <tr>
+              <td>畜牧產值</td>
+              <td>204,172,925</td>
+              <td>千元</td>
+              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-up px-1"></i>
+                <span class="px-1">10.0%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+            <tr>
+              <td>漁產總值</td>
+              <td>82,206,232</td>
+              <td>千元</td>
+              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-up px-1"></i>
+                <span class="px-1">5.6%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- table 2 -->
+      <div class="table-responsive my-10 table-wrapper pt-5 px-2 pb-2">
+        <!-- label -->
+        <h3 class="table-label fw-bold">糧食供需</h3>
+
+        <!-- content -->
+        <table class="table m-0">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">重要統計指標</th>
+              <th scope="col" class="text-center">統計資料</th>
+              <th scope="col" class="text-center">單位</th>
+              <th scope="col" class="text-center">較上年增減</th>
+              <th scope="col" class="text-center">資料日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">糧食自給率</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="pl-6">以熱量計算</td>
+              <td>30.73</td>
+              <td>%</td>
+              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-down px-1"></i>
+                <span class="px-1">0.5%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+
+            <tr>
+              <td class="pl-6">以價格計算</td>
+              <td>58.62</td>
+              <td>%</td>
+              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-down px-1"></i>
+                <span class="px-1">0.5%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+
+            <tr>
+              <td class="fw-bold">純糧食供給量</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td class="pl-6">每人白米純糧食供給量</td>
+              <td>43.0</td>
+              <td>公斤</td>
+              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-down px-1"></i>
+                <span class="px-1">0.1%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+
+            <tr>
+              <td class="pl-6">每人每年肉類純糧食供給量</td>
+              <td>87.5</td>
+              <td>公斤</td>
+              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-up px-1"></i>
+                <span class="px-1">4.0%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+
+            <tr>
+              <td class="pl-6">每人每年油脂類純糧食供給量</td>
+              <td>22.5</td>
+              <td>公斤</td>
+              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
+                <i class="fa-solid fa-caret-down px-1"></i>
+                <span class="px-1">2.2%</span>
+              </td>
+              <td>111年</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- import bootstrap js -->
+    <script src="bootstrap-5.3.3.js"></script>
+  </body>
+</html>
