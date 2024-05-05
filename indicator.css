@@ -36,46 +36,136 @@ tr {
   top: 0;
   left: 20px;
   padding: 8px 20px;
-  background: #1dbc9c;
+  background: #434acc;
 }
 
 .table-label:before {
   position: absolute;
   top: 0;
-  content: "";
+  content: '';
   width: 0;
   right: -8px;
   height: 0;
   border-style: solid;
   border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent #0f7460;
+  border-color: transparent transparent transparent #1b1d4e;
 }
 
 .table-label:after {
   position: absolute;
   top: 0;
-  content: "";
+  content: '';
   left: -8px;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 0 8px 8px;
-  border-color: transparent transparent #0f7460 transparent;
+  border-color: transparent transparent #1b1d4e transparent;
 }
 
+/* table of 糧食供需 */
 .table-responsive:nth-of-type(3) .table-label {
-  background-color: #96ad55;
+  background-color: #bd2837;
 }
 
 .table-responsive:nth-of-type(3) .table-label:before {
-  border-color: transparent transparent transparent #566920 ;
+  border-color: transparent transparent transparent #6e1821;
 }
 
 .table-responsive:nth-of-type(3) .table-label:after {
-  border-color: transparent transparent #566920 transparent;
+  border-color: transparent transparent #6e1821 transparent;
 }
 
+/* table of 農產貿易 */
+.table-responsive:nth-of-type(4) .table-label {
+  background-color: #8d581c;
+}
 
+.table-responsive:nth-of-type(4) .table-label:before {
+  border-color: transparent transparent transparent #3b250c;
+}
+
+.table-responsive:nth-of-type(4) .table-label:after {
+  border-color: transparent transparent #3b250c transparent;
+}
+
+/* table of 農業 */
+.table-responsive:nth-of-type(5) .table-label {
+  background-color: #065b4c;
+}
+
+.table-responsive:nth-of-type(5) .table-label:before {
+  border-color: transparent transparent transparent #033028;
+}
+
+.table-responsive:nth-of-type(5) .table-label:after {
+  border-color: transparent transparent #033028 transparent;
+}
+
+/* table of 農耕業 */
+.table-responsive:nth-of-type(6) .table-label {
+  background-color: #31907e;
+}
+
+.table-responsive:nth-of-type(6) .table-label:before {
+  border-color: transparent transparent transparent #112d28;
+}
+
+.table-responsive:nth-of-type(6) .table-label:after {
+  border-color: transparent transparent #112d28 transparent;
+}
+
+/* table of 農牧業 */
+.table-responsive:nth-of-type(7) .table-label {
+  background-color: #77d3a8;
+}
+
+.table-responsive:nth-of-type(7) .table-label:before {
+  border-color: transparent transparent transparent #40725a;
+}
+
+.table-responsive:nth-of-type(7) .table-label:after {
+  border-color: transparent transparent #40725a transparent;
+}
+
+/* table of 林業 */
+.table-responsive:nth-of-type(8) .table-label {
+  background-color: #137d6a;
+}
+
+.table-responsive:nth-of-type(8) .table-label:before {
+  border-color: transparent transparent transparent #093c33;
+}
+
+.table-responsive:nth-of-type(8) .table-label:after {
+  border-color: transparent transparent #093c33 transparent;
+}
+
+/* table of 漁業 */
+.table-responsive:nth-of-type(9) .table-label {
+  background-color: #023e7d;
+}
+
+.table-responsive:nth-of-type(9) .table-label:before {
+  border-color: transparent transparent transparent #012041;
+}
+
+.table-responsive:nth-of-type(9) .table-label:after {
+  border-color: transparent transparent #012041 transparent;
+}
+
+/* table of 畜牧業 */
+.table-responsive:nth-of-type(10) .table-label {
+  background-color: #da570f;
+}
+
+.table-responsive:nth-of-type(10) .table-label:before {
+  border-color: transparent transparent transparent #5a2407;
+}
+
+.table-responsive:nth-of-type(10) .table-label:after {
+  border-color: transparent transparent #5a2407 transparent;
+}
 
 .table th {
   background-color: #8aa96c;

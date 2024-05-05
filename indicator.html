@@ -1,310 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      data-rh="true"
-      name="viewport"
-      content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"
-    />
-    <title>農業統計資料查詢</title>
 
-    <!-- import google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400..600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta data-rh="true" name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1" />
+  <title>農業統計資料查詢</title>
 
-    <!-- import original CSS -->
-    <link rel="stylesheet" href="SDWeb.css" />
+  <!-- import google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400..600&display=swap" rel="stylesheet" />
 
-    <!-- import extend CSS -->
-    <link rel="stylesheet" href="SDWeb_extend.css" />
+  <!-- import original CSS -->
+  <link rel="stylesheet" href="SDWeb.css" />
 
-    <!-- import bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-5.3.3.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-    />
+  <!-- import extend CSS -->
+  <link rel="stylesheet" href="SDWeb_extend.css" />
 
-    <!-- import indicator CSS -->
-    <link rel="stylesheet" href="indicator.css" />
-  </head>
+  <!-- import bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-5.3.3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" />
 
-  <body>
-    <!-- container -->
-    <div id="dvTop" class="container">
-      <!-- header -->
-      <div
-        style="
+  <!-- import indicator CSS -->
+  <link rel="stylesheet" href="indicator.css" />
+</head>
+
+<body>
+  <!-- container -->
+  <div id="dvTop" class="container">
+    <!-- header -->
+    <div style="
           background-image: url(https://agrstat.moa.gov.tw/sdweb/images/banner_bg.gif);
-        "
-      >
-        <img
-          src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731"
-          alt="農業統計資料查詢"
-          class="img-fluid"
-        />
-      </div>
-
-      <!-- navbar -->
-      <nav
-        class="book-navbar navbar navbar-expand-lg py-md-0"
-        style="background-color: #8aa96c"
-      >
-        <div class="container px-md-0">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#bookNavBar"
-            aria-controls="bookNavBar"
-            aria-controls="bookNavBar"
-            aria-expanded="false"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- nav wrapper -->
-          <div id="bookNavBar" class="collapse navbar-collapse">
-            <ul class="navbar-nav mb-sm-0 w-full justify-content-lg-center">
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="../maintenance/Announce.aspx"
-                  id="ctl00_dtlMenu_ctl00_lnkMenu"
-                  >系統公告</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="../indicator/Indicator.aspx"
-                  id="ctl00_dtlMenu_ctl01_lnkMenu"
-                  >農業指標</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="InquireAdvance.aspx"
-                  id="ctl00_dtlMenu_ctl02_lnkMenu"
-                  >動態查詢</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="../trade/tradereport.aspx"
-                  id="ctl00_dtlMenu_ctl03_lnkMenu"
-                  >農業貿易</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="book.html"
-                  id="ctl00_dtlMenu_ctl04_lnkMenu"
-                  >統計書刊</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="../common/Download.aspx"
-                  id="ctl00_dtlMenu_ctl05_lnkMenu"
-                  >下載區</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="../official/OfficialInformation.aspx"
-                  id="ctl00_dtlMenu_ctl06_lnkMenu"
-                  >公務統計</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link px-md-2 px-lg-3 px-xl-4"
-                  href="../maintenance/Question.aspx"
-                  id="ctl00_dtlMenu_ctl07_lnkMenu"
-                  >常見問題</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- table 1 -->
-      <div class="table-responsive my-10 table-wrapper pt-5 px-2 pb-2">
-        <!-- label -->
-        <h3 class="table-label fw-bold">經濟指標</h3>
-
-        <!-- content -->
-        <table class="table m-0">
-          <thead>
-            <tr>
-              <th scope="col" class="text-center">重要統計指標</th>
-              <th scope="col" class="text-center">統計資料</th>
-              <th scope="col" class="text-center">單位</th>
-              <th scope="col" class="text-center">較上年增減</th>
-              <th scope="col" class="text-center">資料日期</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>農業生產總值</td>
-              <td>562,555,485</td>
-              <td>千元</td>
-              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-up px-1"></i>
-                <span class="px-1">5.0%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-            <tr>
-              <td>農產產值</td>
-              <td>275,934,115</td>
-              <td>千元</td>
-              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-up px-1"></i>
-                <span class="px-1">1.4%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-            <tr>
-              <td>林產產值</td>
-              <td>242,212</td>
-              <td>千元</td>
-              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-up px-1"></i>
-                <span class="px-1">6.5%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-            <tr>
-              <td>畜牧產值</td>
-              <td>204,172,925</td>
-              <td>千元</td>
-              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-up px-1"></i>
-                <span class="px-1">10.0%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-            <tr>
-              <td>漁產總值</td>
-              <td>82,206,232</td>
-              <td>千元</td>
-              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-up px-1"></i>
-                <span class="px-1">5.6%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- table 2 -->
-      <div class="table-responsive my-10 table-wrapper pt-5 px-2 pb-2">
-        <!-- label -->
-        <h3 class="table-label fw-bold">糧食供需</h3>
-
-        <!-- content -->
-        <table class="table m-0">
-          <thead>
-            <tr>
-              <th scope="col" class="text-center">重要統計指標</th>
-              <th scope="col" class="text-center">統計資料</th>
-              <th scope="col" class="text-center">單位</th>
-              <th scope="col" class="text-center">較上年增減</th>
-              <th scope="col" class="text-center">資料日期</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="fw-bold">糧食自給率</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="pl-6">以熱量計算</td>
-              <td>30.73</td>
-              <td>%</td>
-              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-down px-1"></i>
-                <span class="px-1">0.5%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-
-            <tr>
-              <td class="pl-6">以價格計算</td>
-              <td>58.62</td>
-              <td>%</td>
-              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-down px-1"></i>
-                <span class="px-1">0.5%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-
-            <tr>
-              <td class="fw-bold">純糧食供給量</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <td class="pl-6">每人白米純糧食供給量</td>
-              <td>43.0</td>
-              <td>公斤</td>
-              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-down px-1"></i>
-                <span class="px-1">0.1%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-
-            <tr>
-              <td class="pl-6">每人每年肉類純糧食供給量</td>
-              <td>87.5</td>
-              <td>公斤</td>
-              <td style="color: var(--bs-danger);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-up px-1"></i>
-                <span class="px-1">4.0%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-
-            <tr>
-              <td class="pl-6">每人每年油脂類純糧食供給量</td>
-              <td>22.5</td>
-              <td>公斤</td>
-              <td style="color: var(--bs-success);" class="d-flex align-items-md-center">
-                <i class="fa-solid fa-caret-down px-1"></i>
-                <span class="px-1">2.2%</span>
-              </td>
-              <td>111年</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        ">
+      <img src="https://agrstat.moa.gov.tw/sdweb/images/banner.jpg?1120731" alt="農業統計資料查詢" class="img-fluid" />
     </div>
 
-    <!-- import bootstrap js -->
-    <script src="bootstrap-5.3.3.js"></script>
-  </body>
+    <!-- navbar -->
+    <nav class="book-navbar navbar navbar-expand-lg py-md-0" style="background-color: #8aa96c">
+      <div class="container px-md-0">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bookNavBar"
+          aria-controls="bookNavBar" aria-controls="bookNavBar" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- nav wrapper -->
+        <div id="bookNavBar" class="collapse navbar-collapse">
+          <ul class="navbar-nav mb-sm-0 w-full justify-content-lg-center">
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="../maintenance/Announce.aspx"
+                id="ctl00_dtlMenu_ctl00_lnkMenu">系統公告</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="../indicator/Indicator.aspx"
+                id="ctl00_dtlMenu_ctl01_lnkMenu">農業指標</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="InquireAdvance.aspx"
+                id="ctl00_dtlMenu_ctl02_lnkMenu">動態查詢</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="../trade/tradereport.aspx"
+                id="ctl00_dtlMenu_ctl03_lnkMenu">農業貿易</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="book.html" id="ctl00_dtlMenu_ctl04_lnkMenu">統計書刊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="../common/Download.aspx"
+                id="ctl00_dtlMenu_ctl05_lnkMenu">下載區</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="../official/OfficialInformation.aspx"
+                id="ctl00_dtlMenu_ctl06_lnkMenu">公務統計</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-md-2 px-lg-3 px-xl-4" href="../maintenance/Question.aspx"
+                id="ctl00_dtlMenu_ctl07_lnkMenu">常見問題</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- table 1 -->
+    <div class="table-responsive my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">經濟指標</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>農業生產總值</td>
+            <td class="text-end">562,555,485</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">5.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td>農產產值</td>
+            <td class="text-end">275,934,115</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">1.4%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td>林產產值</td>
+            <td class="text-end">242,212</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">6.5%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td>畜牧產值</td>
+            <td class="text-end">204,172,925</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">10.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td>漁產總值</td>
+            <td class="text-end">82,206,232</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">5.6%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 2 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">糧食供需</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">糧食自給率</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">以熱量計算</td>
+            <td class="text-end">30.73</td>
+            <td>%</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.5%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">以價格計算</td>
+            <td class="text-end">58.62</td>
+            <td>%</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.5%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">純糧食供給量</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">每人白米純糧食供給量</td>
+            <td class="text-end">43.0</td>
+            <td>公斤</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.1%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">每人每年肉類純糧食供給量</td>
+            <td class="text-end">87.5</td>
+            <td>公斤</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">4.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">每人每年油脂類純糧食供給量</td>
+            <td class="text-end">22.5</td>
+            <td>公斤</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">2.2%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 農產貿易 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">農產貿易</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">進口</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">農耕產品進口值</td>
+            <td class="text-end">925,474</td>
+            <td class="text-nowrap">千美元</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">13.0%</span>
+            </td>
+            <td class="text-nowrap">113年03月</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">林產品進口值</td>
+            <td class="text-end">90,579</td>
+            <td>千美元</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">28.0%</span>
+            </td>
+            <td>113年03月</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">水產品進口值</td>
+            <td class="text-end">175,565.3 </td>
+            <td>千美元</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">5.5%</span>
+            </td>
+            <td>113年03月</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">出口</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">農耕產品進口值</td>
+            <td class="text-end">252,539</td>
+            <td>千美元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">10.6%</span>
+            </td>
+            <td>113年03月</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">林產品進口值</td>
+            <td class="text-end">3,712</td>
+            <td>千美元</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">34.0%</span>
+            </td>
+            <td>113年03月</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">水產品進口值</td>
+            <td class="text-end">128,218</td>
+            <td>千美元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">2.5%</span>
+            </td>
+            <td>113年03月</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 農業 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">農業</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">生產</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">農產產值</td>
+            <td class="text-end">275,934,115 </td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">1.4%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">農家所得</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">農家所得</td>
+            <td class="text-end">1,206,739</td>
+            <td class="text-nowrap">元/戶</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">2.8%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">農業淨收入</td>
+            <td class="text-end">280,889</td>
+            <td>元/戶</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">1.2%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">組織</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">農會數</td>
+            <td class="text-end">302 </td>
+            <td>家</td>
+            <td class="d-flex align-items-center" style="color: var(--bs-dark);">
+              <i class="fa-solid fa-minus px-1" style="font-size: .7rem;"></i>
+              <span class="px-1">0.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">農會會員數</td>
+            <td class="text-end">1,720,138</td>
+            <td>人</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">1.6%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">農會正會員數</td>
+            <td class="text-end">838,599</td>
+            <td>人</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">2.1%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">農會農事小組數</td>
+            <td class="text-end">4,633</td>
+            <td>組</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.1%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 農耕業 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">農耕業</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">生產</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">稻米生產指數</td>
+            <td class="text-end">100.91</td>
+            <td>%</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">0.9%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">稻米(收穫面積)</td>
+            <td class="text-end">238,701</td>
+            <td>公頃</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">6.6%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6 text-nowrap">稻米(收穫量)</td>
+            <td class="text-end">1,575,777</td>
+            <td>公噸</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">1.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 農牧業 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">農牧業</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">農家</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">農家戶數</td>
+            <td class="text-end">759,472</td>
+            <td>戶</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">0.2%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td class="pl-6">農家人口數</td>
+            <td class="text-end">2,391,702</td>
+            <td>人</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">4.9%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">勞動力</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">農業就業人口</td>
+            <td class="text-end">494</td>
+            <td>千人</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">5.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">農地</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">耕地面積</td>
+            <td class="text-end">779,826</td>
+            <td>公頃</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.9%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 林業 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">林業</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">生產</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">林業產值</td>
+            <td class="text-end">242,212</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">6.5%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td class="pl-6">蓄積</td>
+            <td class="text-end">2,197,090</td>
+            <td>公頃</td>
+            <td style="color: var(--bs-dark);" class="d-flex align-items-center">
+              <i class="fa-solid fa-minus px-1" style="font-size: .7rem;"></i>
+              <span class="px-1">0.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 漁業 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">漁業</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">生產</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">漁業產值</td>
+            <td class="text-end">82,206,232</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">5.6%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">水產類糧食自給率(價格)</td>
+            <td class="text-end">83</td>
+            <td>%</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">20.2%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">資材</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">漁船艘數</td>
+            <td class="text-end">21,708</td>
+            <td>艘</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.1%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">勞動力</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">漁戶數</td>
+            <td class="text-end">126,055</td>
+            <td>戶</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">4.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="fw-bold">組織</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">漁會數</td>
+            <td class="text-end">40</td>
+            <td>家</td>
+            <td class="d-flex align-items-center" style="color: var(--bs-dark);">
+              <i class="fa-solid fa-minus px-1" style="font-size: .7rem;"></i>
+              <span class="px-1">0.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+
+          <tr>
+            <td class="pl-6">漁會會員數</td>
+            <td class="text-end">416,504</td>
+            <td>人</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">2.6%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- table 畜牧業 -->
+    <div class="table-responsive table-responsive-md my-10 table-wrapper pt-5 px-2 pb-2">
+      <!-- label -->
+      <h3 class="table-label fw-bold">畜牧業</h3>
+
+      <!-- content -->
+      <table class="table m-0">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">重要統計指標</th>
+            <th scope="col" class="text-center">統計資料</th>
+            <th scope="col" class="text-center">單位</th>
+            <th scope="col" class="text-center">較上年增減</th>
+            <th scope="col" class="text-center">資料日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">生產</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pl-6">畜牧產值</td>
+            <td class="text-end">204,172,925</td>
+            <td>千元</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">10.0%</span>
+            </td>
+            <td>111年</td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">豬(飼養戶數)</td>
+            <td class="text-end">5,804</td>
+            <td>戶</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">3.1%</span>
+            </td>
+            <td>112年</td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">豬(飼養頭數)</td>
+            <td class="text-end">5,319,203</td>
+            <td>頭</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">0.1%</span>
+            </td>
+            <td>112年</td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">牛(飼養頭數)</td>
+            <td class="text-end">156,021</td>
+            <td>頭</td>
+            <td style="color: var(--bs-success);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-down px-1"></i>
+              <span class="px-1">2.6%</span>
+            </td>
+            <td>112年</td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">蛋雞(飼養隻數)</td>
+            <td class="text-end">45,713</td>
+            <td>千隻</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">1.1%</span>
+            </td>
+            <td>112年</td>
+          </tr>
+          <tr>
+            <td class="pl-6 text-nowrap">肉用雞(飼養隻數)</td>
+            <td class="text-end">55,256</td>
+            <td>千隻</td>
+            <td style="color: var(--bs-danger);" class="d-flex align-items-center">
+              <i class="fa-solid fa-caret-up px-1"></i>
+              <span class="px-1">8.7%</span>
+            </td>
+            <td>112年</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- import bootstrap js -->
+  <script src="bootstrap-5.3.3.js"></script>
+</body>
+
 </html>
